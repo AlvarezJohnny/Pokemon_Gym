@@ -44,3 +44,4 @@ let cont = document.createElement('div')
     cont.appendChild(img)
     document.body.appendChild(cont)
 }
+ 
