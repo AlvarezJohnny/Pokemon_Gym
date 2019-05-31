@@ -1,0 +1,57 @@
+.grid-container {
+  display: grid;
+  grid-template-rows:700px 700px 700px 700px;
+}
+
+#Morgan_Section {
+  display: grid;
+  grid-template: 500px / 600px 600px;
+  background-image: url('http://fc05.deviantart.net/fs71/f/2013/098/e/7/pokemon_x_y_battle_scene_by_jenske05-d5ynr9c.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+button {
+ color: transparent;
+ border: 2px solid black;
+ width: 90px;
+ text-align: center;
+ background-image: url('https://vignette.wikia.nocookie.net/pokemon/images/c/c3/Love_Ball_-_Pokemon_HeartGold_and_SoulSilver.png/revision/latest?cb=20181224115516');
+ height: 90px;
+ display: inline-block;
+ cursor: pointer;
+}
+
+.button1 {
+    border-radius: 100%;
+    margin-left: 38%;
+    margin-top: 14%;
+    background-image: url('https://www.pngkey.com/png/full/156-1564666_love-ball-one-of-the-worst-poke-balls.png');
+    background-size: cover;
+}
+
+.button2 {
+    border-radius: 100%;
+    margin-left: 38%;
+    margin-top: 14%;
+    background-image: url('https://www.pngkey.com/png/full/156-1564666_love-ball-one-of-the-worst-poke-balls.png');
+    background-size: cover;
+}
+
+.button3 {
+    border-radius: 100%;
+    margin-left: 38%;
+    margin-top: 14%;
+    background-image: url('https://www.pngkey.com/png/full/156-1564666_love-ball-one-of-the-worst-poke-balls.png');
+    background-size: cover;
+}
+
+.pokeball {
+    display: grid;
+    grid-template: 500px / 200px 200px 200px;
+    padding-top: 29%;
+}
+
+img {
+  height: 500px;
+}
