@@ -1,46 +1,67 @@
-requestAPI = () => {
-  const Pokemon = prompt("Enter a pokemon name")
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            let data = JSON.parse(this.responseText)
-            pokemon = {
-                name: data['name'],
-                attack: data['stats'][4]['base_stat'],
-                defense: data['stats'][3]['base_stat'],
-                hp: data['stats'][5]['base_stat'],
-                ability: data['abilities'][0]['ability']['name'],
-                sprite: data['sprites']['front_default']
+let dex = []
 
-            }
-            displayPokemon()
-        }
-    };
-    xhttp.open("GET", `https://fizal.me/pokeapi/api/v2/name/${Pokemon.toLowerCase()}.json`, true);
-    xhttp.send();
+function loadDoc(mon) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      pokemonData = JSON.parse(this.responseText)
+      pokemon = new Pokemon(
+      pokemonData["name"],
+      pokemonData["id"],
+      pokemonData["stats"][5]["base_stat"],
+      pokemonData["stats"][4]["base_stat"],
+      pokemonData["stats"][3]["base_stat"],
+      pokemonData["stats"][2]["base_stat"],
+      pokemonData["stats"][1]["base_stat"],
+      pokemonData["stats"][0]["base_stat"],
+      pokemonData['abilities'][0]['ability'],
+      pokemonData['abilities'][1]['ability'],
+      `https://www.smogon.com/dex/media/sprites/xy/${pokemonData["name"]}.gif`
 
+    )
+    dex.push(pokemon)
+    }
+  };
+  xhttp.open("GET", `https://pokeapi.co/api/v2/pokemon/${mon}`, true);
+  xhttp.send();
+}
+
+
+loadDoc(26)
+loadDoc(172)
+loadDoc(78)
+loadDoc(7)
+loadDoc(16)
+loadDoc(19)
+loadDoc(157)
+loadDoc(248)
+loadDoc(445)
+
+class Pokemon {
+  constructor(name, id, hp, atk, def, spAtk, spDef, spd, ability, ability2, image) {
+    this.name = name
+    this.id = id
+    this.hp = hp
+    this.atk = atk
+    this.def = def
+    this.spAtk = spAtk
+    this.spDef = spDef
+    this.spd = spd
+    this.ability = ability
+    this.ability2 = ability2
+    this.image = image
   }
 
-let cont = document.createElement('div')
-    let p = document.createElement('p')
-    let p1 = document.createElement('p1')
-    let p2 = document.createElement('p2')
-    let p3 = document.createElement('p3')
-    let p4 = document.createElement('p4')
-    let img = document.createElement('img')
-    displayPokemon = () => {
-
-    p.innerText = pokemon['name']
-    p1.innerText = 'Defense   ' + pokemon['defense']
-    p2.innerText = 'Attack   ' + pokemon['attack']
-    p3.innerText = 'Hp   ' + pokemon['hp']
-    p4.innerText = 'Ability   ' + pokemon['ability']
-    img.setAttribute('src', pokemon['sprite'])
-    cont.appendChild(p)
-    cont.appendChild(p1)
-    cont.appendChild(p2)
-    cont.appendChild(p3)
-    cont.appendChild(p4)
-    cont.appendChild(img)
-    document.body.appendChild(cont)
 }
+
+let cont = document.getElementById('Typhlosion')
+  let p = document.createElement('p')
+  let p1 = document.createElement('p1')
+  let p2 = document.createElement('p2')
+  let p3 = document.createElement('p3')
+  let p4 = document.createElement('p4')
+  let img = document.createElement('img')
+
+displayPokemon = () => {
+  p.innerText = pokemon['name']
+
