@@ -57,6 +57,16 @@
   background-repeat: no-repeat;
 }
 
+#Omar {
+  display: grid;
+  grid-template: 25px 25px 25px 25px 25px / 25px 25px 25px 25px 25px;
+  grid-gap: 5%;
+}
+
+p1, p2, p3, p4, p5, p6, p7, p8, p9 {
+  font-family: sans-serif;
+}
+
 #Johnny {
   display: grid;
   grid-template: 600px / 600px 600px;
@@ -142,10 +152,6 @@ button:hover {
     display: grid;
     grid-template: 200px / 200px 200px 200px;
     padding-top: 3%;
-}
-
-img {
-  height: 500px;
 }
 
 
