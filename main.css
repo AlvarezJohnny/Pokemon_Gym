@@ -151,6 +151,14 @@ img {
   height: 500px;
 }
 
+#sec3 {
+  background-image: url('https://steamuserimages-a.akamaihd.net/ugc/798670680706884599/869470D49190F2E765B9E0FFF42204A26C5B74D0/');
+  background-size: cover;
+  width: 100%;
+  height: 62vh;
+
+}
+
 
 
 #sec3 {
@@ -207,4 +215,9 @@ img {
   animation: fadeIn;
  border: none;
  border-radius: 100%;
+}
+
+#Morgan {
+  height: 50%;
+  text-transform: capitalize;
 }
