@@ -1,5 +1,5 @@
 let dex = []
-function loadDoc(mon) {
+function loadDoc(mon, trainer) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -17,13 +17,30 @@ function loadDoc(mon) {
       pokemonData['abilities'][1]['ability'],
       `https://www.smogon.com/dex/media/sprites/xy/${pokemonData["name"]}.gif`
     )
-    dex.push(pokemon)
-    displayPokemon()
+    trainer.dex.push(pokemon)
+    displayPokemon(trainer.name)
     }
   };
   xhttp.open("GET", `https://pokeapi.co/api/v2/pokemon/${mon}`, true);
   xhttp.send();
 }
+
+class Trainer {
+  constructor(name){
+    this.name = name
+    this.dex = []
+  }
+  get(name) {
+
+  }
+  all() {
+    console.log(this.dex)
+  }
+}
+
+morgan = new Trainer("Morgan")
+omar = new Trainer("Omar")
+jonathan = new Trainer("Jonathan")
 
 
 // loadDoc(26)
@@ -35,6 +52,9 @@ function loadDoc(mon) {
 // loadDoc(157)
 // loadDoc(248)
 // loadDoc(445)
+jonathan.dex.push(dex[0])
+morgan.dex.push(dex[0])
+omar.dex.push(dex[0])
 
 class Pokemon {
   constructor(name, id, hp, atk, def, spAtk, spDef, spd, ability, ability2, image) {
@@ -53,7 +73,7 @@ class Pokemon {
 
 }
 
-let cont = document.getElementById('Typhlosion')
+
   let p = document.createElement('p')
   let p1 = document.createElement('p1')
   let p2 = document.createElement('p2')
@@ -66,7 +86,8 @@ let cont = document.getElementById('Typhlosion')
   let p9 = document.createElement('p9')
   let img1 = document.createElement('img')
 
- function displayPokemon() {
+ function displayPokemon(trainer) {
+let container = document.getElementById(trainer)
   p.innerText = pokemonData['name']
   p1.innerText = 'ID: ' + pokemonData["id"]
   p2.innerText = 'Hp: ' + pokemonData["stats"][5]["base_stat"]
@@ -78,18 +99,16 @@ let cont = document.getElementById('Typhlosion')
   p8.innerText = 'Ability: ' + pokemonData["abilities"][0]["ability"]['name']
   p9.innerText = 'DW Ability: ' + pokemonData["abilities"][1]["ability"]['name']
   img1.setAttribute('src', `https://www.smogon.com/dex/media/sprites/xy/${pokemonData["name"]}.gif`)
-  cont.appendChild(p)
-   cont.appendChild(p1)
-   cont.appendChild(p2)
-   cont.appendChild(p3)
-   cont.appendChild(p4)
-   cont.appendChild(p5)
-   cont.appendChild(p6)
-   cont.appendChild(p7)
-   cont.appendChild(p8)
-   cont.appendChild(p9)
-   cont.appendChild(img1)
-   document.body.appendChild(cont)
-
+  container.appendChild(p)
+   container.appendChild(p1)
+   container.appendChild(p2)
+   container.appendChild(p3)
+   container.appendChild(p4)
+   container.appendChild(p5)
+   container.appendChild(p6)
+   container.appendChild(p7)
+   container.appendChild(p8)
+   container.appendChild(p9)
+   container.appendChild(img1)
+   document.body.appendChild()
 }
-

@@ -153,6 +153,7 @@ button:hover {
 
 img {
   height: 500px;
+}
 
 #sec3 {
   background-image: url('https://steamuserimages-a.akamaihd.net/ugc/798670680706884599/869470D49190F2E765B9E0FFF42204A26C5B74D0/');
@@ -187,7 +188,7 @@ border-color: #555 transparent transparent transparent;
   margin-top: 0%;
   padding-top: 2%;
 }
-  
+
 .poke-btn {
    transition: all .2s ease-in-out;
    cursor: pointer;
@@ -248,4 +249,9 @@ border-color: #555 transparent transparent transparent;
 @keyframes animatetop {
   from {top:-300px; opacity:0}
   to {top:0; opacity:1}
+}
+
+#Morgan {
+  height: 50%;
+  text-transform: capitalize;
 }
