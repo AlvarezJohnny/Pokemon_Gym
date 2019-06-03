@@ -5,6 +5,23 @@
   height: 62vh;
 }
 
+.popuptext {
+  visibility: hidden;
+}
+
+.popuptext::after {
+  content: "";
+  border-width: 5px;
+border-style: solid;
+border-color: #555 transparent transparent transparent;
+}
+
+.poke-btn .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
 
 .O-grid {
   display: grid;
@@ -16,6 +33,9 @@
 }
 .poke-btn {
    transition: all .2s ease-in-out;
+   cursor: pointer;
+   -webkit-user-select: none;
+
  }
 
  .poke-btn:hover {
@@ -65,7 +85,7 @@
 }
 
 @-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
+  from {top:-300px; opacity:0}
   to {top:0; opacity:1}
 }
 

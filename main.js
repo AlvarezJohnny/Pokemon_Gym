@@ -64,4 +64,3 @@ let cont = document.getElementById('Typhlosion')
 
 displayPokemon = () => {
   p.innerText = pokemon['name']
-
