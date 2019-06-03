@@ -153,4 +153,99 @@ button:hover {
 
 img {
   height: 500px;
+
+#sec3 {
+  background-image: url('https://steamuserimages-a.akamaihd.net/ugc/798670680706884599/869470D49190F2E765B9E0FFF42204A26C5B74D0/');
+  background-size: cover;
+  width: 100%;
+  height: 62vh;
+}
+
+.popuptext {
+  visibility: hidden;
+}
+
+.popuptext::after {
+  content: "";
+  border-width: 5px;
+border-style: solid;
+border-color: #555 transparent transparent transparent;
+}
+
+.poke-btn .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+
+.O-grid {
+  display: grid;
+  grid-template: 75px / 75px 75px 75px;
+  grid-gap: 6%;
+  padding-left: 7%;
+  margin-top: 0%;
+  padding-top: 2%;
+}
+  
+.poke-btn {
+   transition: all .2s ease-in-out;
+   cursor: pointer;
+   -webkit-user-select: none;
+ }
+
+ .poke-btn:hover {
+   transform: scale(1.1);
+ }
+
+.poke-btn:nth-child(1) {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Pokebola-pokeball-png-0.png');
+  background-size: cover;
+  animation: fadeIn;
+  border: none;
+  border-radius: 36px;
+
+}
+
+.poke-btn:nth-child(2) {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Pokebola-pokeball-png-0.png');
+  background-size: cover;
+  animation: fadeIn;
+  border: none;
+  border-radius: 36px;
+
+}
+
+.poke-btn:nth-child(3) {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Pokebola-pokeball-png-0.png');
+  background-size: cover;
+  animation: fadeIn;
+ border: none;
+ border-radius: 36px;
+}
+
+#oGtrainer {
+  width: 150px;
+ height: auto;
+ margin-top: -11vh;
+ float: right;
+ padding-right: -3%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
 }
