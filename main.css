@@ -47,10 +47,7 @@
   transform: translateY(10px);
 }
 
-.grid-container {
-  display: grid;
-  grid-template-rows:600px 600px 600px 600px;
-}
+
 
 #Morgan_Section {
   display: grid;
@@ -150,15 +147,6 @@ button:hover {
 img {
   height: 500px;
 }
-
-#sec3 {
-  background-image: url('https://steamuserimages-a.akamaihd.net/ugc/798670680706884599/869470D49190F2E765B9E0FFF42204A26C5B74D0/');
-  background-size: cover;
-  width: 100%;
-  height: 62vh;
-
-}
-
 
 
 #sec3 {
