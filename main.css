@@ -1,3 +1,4 @@
+
 #section1 {
   background-color: red;
   width: 100%;
@@ -16,11 +17,6 @@
  height: 300px;
 }
 
-a {
-  text-decoration: none;
-  color: transparent;
-}
-
 .button-main {
   color: transparent;
   border: 30px solid black;
@@ -36,7 +32,7 @@ a {
 .button-main {
     border-radius: 100%;
     margin-left: 38%;
-    margin-top: 14%;
+    margin-top: 10%;
 }
 
 .button-main:hover {
@@ -58,7 +54,7 @@ a {
 
 #Morgan_Section {
   display: grid;
-  grid-template: 600px / 600px 600px;
+  grid-template: 600px/ 600px 600px;
   background-image: url('http://fc05.deviantart.net/fs71/f/2013/098/e/7/pokemon_x_y_battle_scene_by_jenske05-d5ynr9c.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -141,53 +137,42 @@ button:hover {
 
 .pokeball {
     display: grid;
-    grid-template: 500px / 200px 200px 200px;
+    grid-template: 200px/ 200px 200px 200px;
     padding-top: 3%;
 }
 
 #leader {
     display: grid;
-    grid-template: 500px / 200px 200px 200px;
+    grid-template: 200px / 200px 200px 200px;
     padding-top: 3%;
 }
 
 img {
   height: 500px;
+}
+
+
 
 #sec3 {
-  background-image: url('https://steamuserimages-a.akamaihd.net/ugc/798670680706884599/869470D49190F2E765B9E0FFF42204A26C5B74D0/');
+  background-image: url('http://www.sclance.com/backgrounds/pokemon-gym-background/pokemon-gym-background_1781431.png');
   background-size: cover;
-  width: 100%;
-  height: 62vh;
+  display: grid;
+  grid-template: 600px / 600px 600px;
 }
-
-.popuptext {
-  visibility: hidden;
-}
-
-.popuptext::after {
-  content: "";
-  border-width: 5px;
-border-style: solid;
-border-color: #555 transparent transparent transparent;
-}
-
-.poke-btn .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
-}
-
 
 .O-grid {
   display: grid;
-  grid-template: 75px / 75px 75px 75px;
+  grid-template: 200px / 200px 200px 200px;
   grid-gap: 6%;
   padding-left: 7%;
-  margin-top: 0%;
+  margin-top: 3%;
   padding-top: 2%;
 }
-  
+
+#oGtrainer {
+  margin-left: 30%;
+}
+
 .poke-btn {
    transition: all .2s ease-in-out;
    cursor: pointer;
@@ -203,7 +188,7 @@ border-color: #555 transparent transparent transparent;
   background-size: cover;
   animation: fadeIn;
   border: none;
-  border-radius: 36px;
+  border-radius: 100%;
 
 }
 
@@ -212,7 +197,7 @@ border-color: #555 transparent transparent transparent;
   background-size: cover;
   animation: fadeIn;
   border: none;
-  border-radius: 36px;
+  border-radius: 100%;
 
 }
 
@@ -221,31 +206,5 @@ border-color: #555 transparent transparent transparent;
   background-size: cover;
   animation: fadeIn;
  border: none;
- border-radius: 36px;
-}
-
-#oGtrainer {
-  width: 150px;
- height: auto;
- margin-top: -11vh;
- float: right;
- padding-right: -3%;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  } to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
-}
-
-@keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
+ border-radius: 100%;
 }
