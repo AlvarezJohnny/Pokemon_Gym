@@ -31,7 +31,11 @@ class Trainer {
     this.dex = []
   }
   get(name) {
-
+    for (let x = 0; x < dex.length; x++){
+      if (dex[x][name]) {
+       return dex[x][name]
+      }
+    }
   }
   all() {
     console.log(this.dex)
@@ -74,7 +78,11 @@ class Pokemon {
 }
 
 
+
+  let p = document.createElement('p')
+
   let h1 = document.createElement('h1')
+
   let p1 = document.createElement('p')
   let p2 = document.createElement('p')
   let p3 = document.createElement('p')
