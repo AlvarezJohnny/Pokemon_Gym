@@ -268,12 +268,15 @@ h1 {
   animation: fadein 1s;
 }
 
+
+
 p {
   font-family: 'Francois One', sans-serif;
   font-size: 21px;
   text-align: center;
   font-weight: bold;
   animation: fadein 1s;
+  text-transform: capitalize;
 }
 
 @keyframes fadein {
