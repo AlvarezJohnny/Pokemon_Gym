@@ -78,7 +78,11 @@ class Pokemon {
 }
 
 
+
   let p = document.createElement('p')
+
+  let h1 = document.createElement('h1')
+
   let p1 = document.createElement('p')
   let p2 = document.createElement('p')
   let p3 = document.createElement('p')
@@ -92,7 +96,7 @@ class Pokemon {
 
  function displayPokemon(trainer) {
 let container = document.getElementById(trainer)
-  p.innerText = pokemonData['name']
+  h1.innerText = pokemonData['name']
   p1.innerText = 'ID: ' + pokemonData["id"]
   p2.innerText = 'Hp: ' + pokemonData["stats"][5]["base_stat"]
   p3.innerText = 'Atk: ' + pokemonData["stats"][4]["base_stat"]
@@ -103,7 +107,7 @@ let container = document.getElementById(trainer)
   p8.innerText = 'Ability: ' + pokemonData["abilities"][0]["ability"]['name']
   p9.innerText = 'DW Ability: ' + pokemonData["abilities"][1]["ability"]['name']
   img1.setAttribute('src', `https://www.smogon.com/dex/media/sprites/xy/${pokemonData["name"]}.gif`)
-  container.appendChild(p)
+  container.appendChild(h1)
    container.appendChild(p1)
    container.appendChild(p2)
    container.appendChild(p3)
