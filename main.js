@@ -31,7 +31,11 @@ class Trainer {
     this.dex = []
   }
   get(name) {
-
+    for (let x = 0; x < dex.length; x++){
+      if (dex[x][name]) {
+       return dex[x][name]
+      }
+    }
   }
   all() {
     console.log(this.dex)
@@ -75,15 +79,15 @@ class Pokemon {
 
 
   let p = document.createElement('p')
-  let p1 = document.createElement('p1')
-  let p2 = document.createElement('p2')
-  let p3 = document.createElement('p3')
-  let p4 = document.createElement('p4')
-  let p5 = document.createElement('p5')
-  let p6 = document.createElement('p6')
-  let p7 = document.createElement('p7')
-  let p8 = document.createElement('p8')
-  let p9 = document.createElement('p9')
+  let p1 = document.createElement('p')
+  let p2 = document.createElement('p')
+  let p3 = document.createElement('p')
+  let p4 = document.createElement('p')
+  let p5 = document.createElement('p')
+  let p6 = document.createElement('p')
+  let p7 = document.createElement('p')
+  let p8 = document.createElement('p')
+  let p9 = document.createElement('p')
   let img1 = document.createElement('img')
 
  function displayPokemon(trainer) {
